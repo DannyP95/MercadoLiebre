@@ -1,0 +1,202 @@
+/* ------------------> BODY <------------------ */
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+    margin: 0;
+}
+
+/* ------------------> HEADER <------------------ */
+
+header{
+    background-color: #EAC926;
+}
+
+/* LOGO  */
+
+.logoImg{
+    width: 50%;
+}
+
+/* BANNER */
+
+.imagenBanner{
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/* BARRA BUSCADOR  */
+
+.barraBuscador{
+    border: 2.5px;    
+    border-style: solid;
+    margin: 5px 0px;
+    width: 50%;
+    color: #666;
+    padding-left: 15px;
+}
+
+.formBuscador{
+    border-color: #666;
+    border: 0.5px;
+    border-style: solid;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.lupa i{
+    margin: 5px;
+    font-size: 20px;
+    border: #666;
+    color: black;
+}
+
+/* NAVEGADOR */
+
+nav{
+    margin-left: 10px;
+    display: none;
+}
+
+.textoTarjetaDeCredito{
+    padding-left: 15%;
+}
+
+.textoTarjetaDeCredito p{
+    display: inline;
+}
+
+.textoTarjetaDeCredito i{
+    display: inline;
+    font-size: 25px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul{
+    list-style: none;
+}
+
+/* MENÚ BURGUER */
+
+.burger-menu{
+    margin: 25px;
+    text-align: center;
+    padding: 10px auto; 
+}
+
+.burger-menu i{
+    border-radius: 20px;
+    background-color: #1259c3;
+    font-size: 50px;
+    padding: 10px;
+    color: white;
+}
+
+
+/* ------------------> MAIN <------------------*/
+
+main{
+    background-color: white;
+    margin: 50px auto;
+    width: 90%;
+    margin: auto;
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 18px;
+}
+
+
+/* SECCION  */
+
+section{
+    background-color: #ebebeb;
+}
+
+section p{
+font-size: 16px;
+}
+
+/* ARTICULOS */
+
+article{
+    margin: 10px 0px;
+    padding: 15px;
+    background-color: white;
+}
+
+article h2{
+    display: none;
+}
+
+section article img{
+    width: 100%;
+    
+}
+
+.itemsArticulos{
+    border-top: #ebebeb solid 1px;
+    padding: 15px;
+}
+
+.itemsArticulos i, .porcentajeDescuento{
+    color: #39b54a;
+}
+
+
+
+/* ------------------> FOOTER <------------------ */
+
+footer{
+    margin-top: 25px;
+    background-color: white;
+}
+
+.footerIconos{
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.footerIconos b{
+    color: black;
+}
+
+.footerIconos i{
+    color: #1259c3;
+    font-size: 125px;
+    margin: 60px  0px;
+}
+
+/* ------------------> RESPONSIVE <------------------ */
+
+@media (min-width: 361px){
+    article h2{
+        display: block;
+    }
+    article{
+            box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        }
+}
+
+@media (min-width: 769px){
+    article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    article h2{
+        display: block;
+    }
+    
+
+}
