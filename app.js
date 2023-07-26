@@ -31,6 +31,10 @@ app.get("/",(req,res)=>{
 
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
 
-app.listen(3333,()=>{
-    console.log("El servidor esta funcionando")
-})
+const port = process.env.PORT || 3001;
+app.listen(port,() => console.log("Servidor corriendo en el puerto ${port}"));
+
+// app.listen(3333,()=>{
+//     console.log("El servidor esta funcionando")
+// })
+
