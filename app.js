@@ -29,6 +29,28 @@ app.get("/",(req,res)=>{
     res.sendFile(path.resolve(__dirname, "./views/home.html"))
 })
 
+// FORMULARIO LOGIN 
+
+app.get("/login", (req,res) => {
+    let htmlPath = path.resolve(__dirname, "./views/login.html");
+    res.sendFile(htmlPath)
+})
+
+app.post("/login", (req, res) => {
+    res.send("LLEGO EL FORMULARIO DE LOGIN")
+})
+
+// FORMULARIO REGISTER
+
+app.get("/register", (req,res) => {
+    let htmlPath = path.resolve(__dirname, "./views/register.html");
+    res.sendFile(htmlPath)
+})
+
+app.post("/register", (req, res) => {
+    res.send("REGISTRO COMPLETADO")
+})
+
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
 
 const port = process.env.PORT || 3001;

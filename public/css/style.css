@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 /* ------------------> BODY <------------------ */
 
 body{
@@ -15,8 +21,14 @@ header{
 
 /* LOGO  */
 
+.logoYLupa{
+    display: flex;
+    justify-content: space-between;
+}
+
 .logoImg{
     width: 50%;
+    padding: 10px;
 }
 
 /* BANNER */
@@ -30,39 +42,46 @@ header{
 /* BARRA BUSCADOR  */
 
 .barraBuscador{
-    border: 2.5px;    
-    border-style: solid;
-    margin: 5px 0px;
-    width: 50%;
+    width: 100%;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
     color: #666;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 .formBuscador{
-    border-color: #666;
-    border: 0.5px;
-    border-style: solid;
     background-color: white;
-    width: 30px;
-    height: 30px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.lupa{
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
 }
 
 .lupa i{
-    margin: 5px;
+    margin: 7px;
     font-size: 20px;
-    border: #666;
     color: black;
 }
 
-/* NAVEGADOR */
+/* ----------> NAVEGADOR <---------- */
+
+/* NAVEGADOR NORMAL*/
 
 nav{
-    margin-left: 10px;
     display: none;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    
 }
 
 .textoTarjetaDeCredito{
-    padding-left: 15%;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .textoTarjetaDeCredito p{
@@ -92,9 +111,9 @@ nav ul{
 }
 
 .burger-menu i{
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #1259c3;
-    font-size: 50px;
+    font-size: 30px;
     padding: 10px;
     color: white;
 }
@@ -124,8 +143,20 @@ section{
     background-color: #ebebeb;
 }
 
+section h1{
+    margin: 10px 0px;
+    padding: 15px 0px;
+    color: #666;
+    font-size: 18px;
+    margin-left: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 section p{
 font-size: 16px;
+margin: 2px;
+margin-right: 6px;
 }
 
 /* ARTICULOS */
@@ -133,11 +164,17 @@ font-size: 16px;
 article{
     margin: 10px 0px;
     padding: 15px;
+    padding-bottom: 0px;
     background-color: white;
+}
+
+.cajaArticuloSection{
+    display: flex;
 }
 
 article h2{
     display: none;
+    margin-top: 15px;
 }
 
 section article img{
@@ -146,15 +183,30 @@ section article img{
 }
 
 .itemsArticulos{
+    display: flex;
+    flex-direction: column;
     border-top: #ebebeb solid 1px;
     padding: 15px;
 }
 
-.itemsArticulos i, .porcentajeDescuento{
-    color: #39b54a;
+.itemsArticulos i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    margin-top: -30px;
 }
 
 
+.itemsArticulos i, .porcentajeDescuento{
+    color: #39b54a;
+}
 
 /* ------------------> FOOTER <------------------ */
 
@@ -179,24 +231,155 @@ footer{
     margin: 60px  0px;
 }
 
+
+/* ------------------> FORMULARIO REGISTRO <------------------ */
+
+.formularioRegistro{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.formularioRegistro input, .formularioRegistro label{
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+
 /* ------------------> RESPONSIVE <------------------ */
 
 @media (min-width: 361px){
+    
+    header nav{
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .lupa{
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .logoLupaCuotas{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .logoYLupa{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav li{
+        margin: 0px 10px;
+    }
+
+    nav{
+        margin: 10px 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    /* NAVEGADOR SIN ICONOS  */
+    
+    .navegadorML{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 20px 0px;
+    }
+    
+    /* NAVEGADOR CON ICONOS  */
+    
+    .navegadorIconos{
+        display: flex;
+    }
+
+    /* TXT CUOTAS SIN INTERES  */
+
+    .textoTarjetaDeCredito{
+        margin: 15px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* BURGUER MENU  */
+
+    .burger-menu{
+        display: none;
+    }
+
+    /* SECTION  */
+
+    section h1{
+        margin: 0px 50px;
+    }
+
+    .cajaSectionArticle{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* ARTICLE  */
+    
+    article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     article h2{
         display: block;
     }
-    article{
-            box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        }
+
+    /* CAMION VERDE  */
+
+}
+.itemsArticulos i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 100%;
+    margin-top: -30px;
 }
 
+/* ----------> DESCKTOP <---------- */
+
 @media (min-width: 769px){
+    
+    section h1{
+        margin-left: 10px;
+    }
+
+    .cajaSectionArticle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }   
+ 
     article{
+        margin: 0px 10px;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     article h2{
         display: block;
     }
-    
-
 }
