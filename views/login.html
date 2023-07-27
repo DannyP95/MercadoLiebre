@@ -64,16 +64,19 @@
 
     <main>
         <form action="/" method="get" >
-            <p>
+            <p class="pRegistro">
                 <label name="username" value="username">Nombre de usuario:</label>
                 <input type="text" id="username" name="username" placeholder="Nombre de usuario" pattern="^[a-zA-Z0-9\_\-]{4,16}$" required>
             </p>
-            <p>
+            <p class="pRegistro">
                 <label name="password">Ingrese una contraseña</label>
                 <input type="password" id="password" name="password" pattern="^.{4,12}$" required>
             </p>
             
-            <button type="submit" name="btnsubmit" id="submit">Envíar</button>
+            <p class="pRegistro">
+
+                <button type="submit" name="btnsubmit" id="submit">Envíar</button>
+            </p>
             
             
         </form>
