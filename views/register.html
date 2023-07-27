@@ -62,7 +62,7 @@
     <img class="imagenBanner" src="/images/img-home-banner.jpg" alt="imgagen banner">
 </header>
 <main>
-    <form id="formularioRegistro" class="formularioRegistro" action="/register" method="post">
+    <form id="formularioRegistro" class="formularioRegistro" action="/" method="get">
         <p class="pRegistro">
             <label name="name" value="name">Nombre:</label>
             <input type="text" id="name" name="name" placeholder="Nombre" pattern="^[a-zA-ZÀ-ÿ\s]{1,40}" required>
@@ -124,7 +124,7 @@
 
         <p class="pRegistro">
             <button type="reset" name="btnreset" id="btnreset">Borrar</button>
-            <button type="submit" name="btnsubmit" id="submit" onclick="regresar()">Envíar</button>
+            <button type="submit" name="btnsubmit" id="submit" >Envíar</button>
         </p>
     </form>
 </main>

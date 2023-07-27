@@ -63,11 +63,15 @@
     </header>
 
     <main>
-        <form action="/login" method="post" >
-            <label name="username" value="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" placeholder="Nombre de usuario">
-            <label name="password">Ingrese una contraseña</label>
-            <input type="password" id="password" name="password">
+        <form action="/" method="get" >
+            <p>
+                <label name="username" value="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Nombre de usuario" pattern="^[a-zA-Z0-9\_\-]{4,16}$" required>
+            </p>
+            <p>
+                <label name="password">Ingrese una contraseña</label>
+                <input type="password" id="password" name="password" pattern="^.{4,12}$" required>
+            </p>
             
             <button type="submit" name="btnsubmit" id="submit">Envíar</button>
             

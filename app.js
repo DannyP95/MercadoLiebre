@@ -50,19 +50,15 @@ app.get("/register", (req,res) => {
 })
 
 app.post("/register", (req, res) => {
-    res.send("REGISTRO COMPLETADO");
-    validarRegister = true;    
-    if (validarRegister === true){
-        app.get("/",(req,res)=>{
-            res.sendFile(path.resolve(__dirname, "./views/home.html"))
-        })
-    }
+    res.send("REGISTRO COMPLETADO");    
+    let htmlPath = path.resolve(__dirname, "./views/register.html");
+    res.sendFile(htmlPath)
 })
 
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
 
 const port = process.env.PORT || 3001;
-app.listen(port,() => console.log("Servidor corriendo en el puerto ${port}"));
+app.listen(port,() => console.log("Servidor corriendo en el puerto 3001"));
 
 // app.listen(3333,()=>{
 //     console.log("El servidor esta funcionando")
