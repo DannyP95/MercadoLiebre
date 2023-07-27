@@ -242,9 +242,31 @@ footer{
     font-size: 25px;
 }
 
-.formularioRegistro input, .formularioRegistro label{
-    margin-bottom: 20px;
+.formularioRegistro input{
+    margin-top: 5px;
     height: 40px;
+}
+
+.pRegistro{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pRegistro span{
+    display: none;
+}
+
+.spanInput{
+    display: block;
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 0px 0px 8px 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
 }
 
 

@@ -21,6 +21,8 @@
 const path = require("path");
 const express = require("express");
 const app = express();
+const validarRegister = false;
+
 // ==========> creamos la ruta a los archivos estaticos 
 app.use(express.json());
 app.use ('/', express.static(__dirname + '/public'))
@@ -48,7 +50,13 @@ app.get("/register", (req,res) => {
 })
 
 app.post("/register", (req, res) => {
-    res.send("REGISTRO COMPLETADO")
+    res.send("REGISTRO COMPLETADO");
+    validarRegister = true;    
+    if (validarRegister === true){
+        app.get("/",(req,res)=>{
+            res.sendFile(path.resolve(__dirname, "./views/home.html"))
+        })
+    }
 })
 
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
