@@ -253,22 +253,30 @@ footer{
     flex-direction: column;
 }
 
-.pRegistro span{
-    display: none;
+#categoriasRegistro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.spanInput{
+#categoriasRegistro label{
     display: block;
-    background-color: red;
-    padding: 10px;
-    color: white;
-    border-radius: 0px 0px 8px 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
 }
 
+#categoriasRegistro span{
+    display: flex;
+    align-items: center;
+}
+
+.pRegistro button{
+    margin: 10px 0px;
+    background-color: #1259c3;
+    color: #FFF;
+    width: 80%;
+    padding: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* ------------------> RESPONSIVE <------------------ */
 
