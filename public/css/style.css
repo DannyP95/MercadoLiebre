@@ -168,8 +168,17 @@ article{
     background-color: white;
 }
 
+article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 .cajaArticuloSection{
     display: flex;
+}
+
+.itemsArticulos:hover > h2{
+    display: block;
+    transition: all 0.2s;
 }
 
 article h2{
@@ -203,6 +212,11 @@ section article img{
     margin-top: -30px;
 }
 
+.itemsArticulos i:hover{
+    transform: rotate(-90deg);
+    transition: 1.2s;
+}
+
 
 .itemsArticulos i, .porcentajeDescuento{
     color: #39b54a;
@@ -231,10 +245,26 @@ footer{
     margin: 60px  0px;
 }
 
+.footerClass h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footerClass p{
+    font-size: 1rem;
+}
+
+footer h4{
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    margin-left: 10px;
+}
 
 /* ------------------> FORMULARIO REGISTRO <------------------ */
 
-.formularioRegistro{
+.formularioRegistro, .formularioLogin{
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -242,7 +272,7 @@ footer{
     font-size: 25px;
 }
 
-.formularioRegistro input{
+.formularioRegistro input, .formularioLogin input{
     margin-top: 5px;
     height: 40px;
 }
@@ -277,6 +307,11 @@ footer{
     margin-left: auto;
     margin-right: auto;
 }
+
+#submit:hover{
+    background-color: #0022AA;
+}
+/* ------------------> FORMULARIO LOGIN <------------------ */
 
 /* ------------------> RESPONSIVE <------------------ */
 
@@ -444,5 +479,31 @@ footer{
     }
     article h2{
         display: block;
+    }
+
+    .footerIconos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;     
+    }
+
+    .footerClass{
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .footerIconos i{
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .footerIconos i:hover{
+        color: #0022AA;
+    }
+
+    /* REGISTRO / LOGIN */
+
+    form button{
+        font-size: 25px;
     }
 }
