@@ -21,7 +21,7 @@ app.get("/login", (req,res) => {
 })
 
 app.post("/login", (req, res) => {
-    res.send("LLEGO EL FORMULARIO DE LOGIN")
+    res.redirect("/");
 })
 
 // FORMULARIO REGISTER
@@ -31,11 +31,12 @@ app.get("/register", (req,res) => {
     res.sendFile(htmlPath)
 })
 
+
 app.post("/register", (req, res) => {
-    res.send("REGISTRO COMPLETADO");    
-    let htmlPath = path.resolve(__dirname, "./views/register.html");
-    res.sendFile(htmlPath)
+    res.redirect("/");
 })
+
+
 
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
 
